@@ -1,0 +1,359 @@
+/* --------fonts----------- */
+@font-face {
+	font-family: "DelaGothicOne";
+	src: url("../fonts/DelaGothicOne-Regular.ttf") format("opentype");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Stolzl";
+	src: url("../fonts/stolzl_regular.otf") format("opentype");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Stolzl";
+	src: url("../fonts/stolzl_medium.otf") format("opentype");
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Stolzl";
+	src: url("../fonts/stolzl_bold.otf") format("opentype");
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Stolzl";
+	src: url("../fonts/stolzl_light.otf") format("opentype");
+	font-weight: 200;
+	font-style: normal;
+}
+
+/* --------reset---------------- */
+* {
+	box-sizing: border-box;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
+	padding: 0;
+}
+
+ul,
+ol {
+	margin: 0;
+
+	padding: 0;
+	list-style: none;
+}
+
+.button {
+	cursor: pointer;
+}
+
+label {
+	margin: 0;
+}
+
+input {
+	background: none;
+	outline: none;
+	padding: 0;
+	margin: 0;
+}
+
+a {
+	color: inherit;
+}
+
+/* -----------main------------- */
+
+html {
+	scroll-behavior: smooth;
+	height: auto;
+	min-height: 100%;
+}
+body {
+	font-family: "Stolzl", sans-serif;
+	color: #ffffff;
+	position: relative;
+	width: 100vw;
+	height: auto;
+	min-height: 100dvh;
+	overflow-x: hidden;
+	background: linear-gradient(0deg, #1a1a1e, #1a1a1e),
+		linear-gradient(90.6deg, #1a1a1e 0.42%, #292a2e 49.61%, #1a1a1e 99.38%);
+	padding-top: 46px;
+}
+
+body::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	pointer-events: none;
+	z-index: 2;
+	background-image: url(../images/bg-img.webp);
+	opacity: 1;
+	overflow: hidden;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+@media screen and (min-width: 992px) {
+	.body {
+		padding-top: 80px;
+	}
+}
+
+.header {
+	width: 100%;
+	max-width: 2400px;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+	z-index: 3;
+}
+
+@media screen and (min-width: 992px) {
+	.header {
+		gap: 32px;
+	}
+}
+
+.logo {
+	width: 172px;
+	height: 20px;
+}
+
+@media screen and (min-width: 992px) {
+	.logo {
+		width: 418px;
+		height: 48px;
+	}
+}
+
+.header-titel {
+	font-family: "DelaGothicOne";
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 18px;
+}
+
+@media screen and (min-width: 992px) {
+	.header-titel {
+		font-size: 48px;
+		line-height: 100%;
+	}
+}
+
+.content {
+	position: relative;
+	z-index: 3;
+	width: 100%;
+	padding-top: 40px;
+}
+
+@media screen and (min-width: 992px) {
+	.content {
+		max-width: 1225px;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.content {
+		max-width: 1512px;
+		padding-top: 55px;
+	}
+}
+
+@media screen and (min-width: 1440px) {
+	.content {
+		max-width: 2400px;
+		/* padding-top: 0; */
+	}
+}
+
+.bubble {
+	width: 237px;
+	height: 41px;
+	max-width: 320px;
+	border-radius: 100px;
+	border: 2px solid #00ff86;
+	padding: 10px;
+	background: #131f28a3;
+	backdrop-filter: blur(16px);
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 100%;
+	text-align: center;
+}
+
+.hero {
+	width: 300px;
+	height: 240px;
+	background-image: url(../images/Maskot.webp);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-end;
+	margin-right: auto;
+	margin-left: auto;
+}
+@media screen and (min-width: 992px) {
+  .hero  {
+    width: 656px;
+    height: 480px;
+    background-position: center -60px;
+  }
+}
+
+.timer-wrap {
+	width:296px;
+	height: 76px;
+	padding-top: 16px;
+	padding-right: 24px;
+	padding-bottom: 16px;
+	padding-left: 24px;
+	border-radius: 24px;
+	border-width: 1px;
+	background: linear-gradient(86.65deg, #00ed7c 0%, #49f1ca 99.98%);
+	border-image-source: linear-gradient(
+		0deg,
+		#238d67 0%,
+		rgba(255, 255, 255, 0.64) 100%
+	);
+}
+
+@media screen and (min-width: 992px) {
+	.timer-wrap {
+		width: 656px;
+		height: 176px;
+		padding-top: 32px;
+		padding-right: 64px;
+		padding-bottom: 32px;
+		padding-left: 64px;
+		border-radius: 56px;
+		border-width: 2px;
+	}
+}
+
+.timer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 12px;
+}
+@media screen and (min-width: 992px) {
+	.timer {
+		gap: 16px;
+	}
+}
+
+.time {
+	display: flex;
+	flex-direction: column;
+}
+
+.time-part {
+	font-family: "DelaGothicOne";
+	font-weight: 400;
+	font-size: 32px;
+	line-height: 32px;
+	color: #292a2e;
+}
+
+@media screen and (min-width: 992px) {
+	.time-part {
+		font-size: 86px;
+		line-height: 86px;
+	}
+}
+
+.label {
+	font-family: "DelaGothicOne";
+	font-weight: 400;
+	font-size: 8px;
+	line-height: 100%;
+	text-align: center;
+	text-transform: uppercase;
+	color: #292a2e52;
+}
+
+@media screen and (min-width: 992px) {
+	.label {
+		font-size: 18px;
+	}
+}
+
+.colon {
+	user-select: none;
+	font-family: "DelaGothicOne";
+	font-weight: 400;
+	font-size: 32px;
+	line-height: 32px;
+	color: #292a2e52;
+}
+
+@media screen and (min-width: 992px) {
+	.colon {
+		font-size: 86px;
+		line-height: 86px;
+	}
+}
+
+.title {
+	width: 296px;
+	height: 46px;
+	max-width: 420px;
+	padding-top: 12px;
+	padding-right: 8px;
+	padding-bottom: 12px;
+	padding-left: 8px;
+	border-radius: 24px;
+	background: #ffffff;
+	backdrop-filter: blur(16px);
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 100%;
+	color: #292a2e;
+	text-align: center;
+}
+
+@media screen and (min-width: 992px) {
+	.title {
+		width: 656px;
+		height: 96px;
+		max-width: 774px;
+		padding-top: 24px;
+		padding-right: 16px;
+		padding-bottom: 24px;
+		padding-left: 16px;
+		border-radius: 56px;
+		font-size: 40px;
+		text-align: center;
+	}
+}
