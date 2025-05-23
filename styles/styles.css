@@ -83,6 +83,108 @@ a {
 	color: inherit;
 }
 
+/* ----------accent---------- */
+.accent1 {
+	position: absolute;
+	left: 0;
+	top: 68px;
+	width: 76.21vw;
+	max-width: 400px;
+}
+
+@media screen and (min-width: 992px) {
+	.accent1 {
+		display: none;
+	}
+}
+
+.accent2 {
+	display: none;
+}
+
+@media screen and (min-width: 992px) {
+	.accent2 {
+		display: block;
+		position: absolute;
+		top: -420px;
+		left: -420px;
+		width: 980px;
+		z-index: 4;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.accent2 {
+		top: -400px;
+		left: -320px;
+	}
+}
+
+.accent3 {
+	position: absolute;
+	right: 0;
+	bottom: 100px;
+	z-index: 4;
+}
+
+@media screen and (min-width: 992px) {
+	.accent3 {
+		right: 0;
+		top: -200px;
+		z-index: 4;
+	}
+}
+
+.accent4 {
+	position: absolute;
+	left: 0;
+	bottom: 100px;
+	width: 49.39vw;
+	max-width: 280px;
+	z-index: 4;
+}
+
+@media screen and (min-width: 992px) {
+	.accent4 {
+		display: none;
+	}
+}
+
+.accent5 {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	max-width: 520px;
+	z-index: 4;
+}
+
+.accent6 {
+	display: none;
+}
+
+@media screen and (min-width: 992px) {
+	.accent6 {
+		display: block;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 89.87vw;
+		z-index: 4;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.accent6 {
+		width: 85.97vw;
+	}
+}
+@media screen and (min-width: 1440px) {
+	.accent6 {
+		width: 54.16vw;
+	}
+}
+
 /* -----------main------------- */
 
 html {
@@ -101,6 +203,7 @@ body {
 	background: linear-gradient(0deg, #1a1a1e, #1a1a1e),
 		linear-gradient(90.6deg, #1a1a1e 0.42%, #292a2e 49.61%, #1a1a1e 99.38%);
 	padding-top: 46px;
+	margin: 0;
 }
 
 body::after {
@@ -109,9 +212,14 @@ body::after {
 	inset: 0;
 	pointer-events: none;
 	z-index: 2;
-	background-image: url(../images/bg-img.webp);
+	background-image: linear-gradient(
+			180deg,
+			rgba(26, 26, 30, 0) 0%,
+			rgba(26, 26, 30, 0.84) 59.2%,
+			#1a1a1e 100%
+		),
+		url(../images/bg-img.webp);
 	opacity: 1;
-	overflow: hidden;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -120,6 +228,7 @@ body::after {
 @media screen and (min-width: 992px) {
 	.body {
 		padding-top: 80px;
+		height: 1226px;
 	}
 }
 
@@ -167,49 +276,55 @@ body::after {
 	}
 }
 
-.content {
+.main {
 	position: relative;
-	z-index: 3;
+	z-index: 8;
 	width: 100%;
 	padding-top: 40px;
 }
 
 @media screen and (min-width: 992px) {
-	.content {
+	.main {
 		max-width: 1225px;
 	}
 }
 
 @media screen and (min-width: 1200px) {
-	.content {
+	.main {
 		max-width: 1512px;
 		padding-top: 55px;
 	}
 }
 
 @media screen and (min-width: 1440px) {
-	.content {
+	.main {
 		max-width: 2400px;
 		/* padding-top: 0; */
 	}
 }
 
 .bubble {
-	width: 237px;
-	height: 41px;
-	max-width: 320px;
 	border-radius: 100px;
 	border: 2px solid #00ff86;
-	padding: 10px;
 	background: #131f28a3;
 	backdrop-filter: blur(16px);
-	font-weight: 400;
-	font-size: 14px;
-	line-height: 100%;
 	text-align: center;
 }
 
+.bubble-text1 {
+	width: 237px;
+	height: 41px;
+	max-width: 320px;
+	padding: 10px;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 .hero {
+	position: relative;
 	width: 300px;
 	height: 240px;
 	background-image: url(../images/Maskot.webp);
@@ -222,17 +337,18 @@ body::after {
 	justify-content: flex-end;
 	margin-right: auto;
 	margin-left: auto;
+	z-index: 100;
 }
 @media screen and (min-width: 992px) {
-  .hero  {
-    width: 656px;
-    height: 480px;
-    background-position: center -60px;
-  }
+	.hero {
+		width: 656px;
+		height: 480px;
+		background-position: center -60px;
+	}
 }
 
 .timer-wrap {
-	width:296px;
+	width: 296px;
 	height: 76px;
 	padding-top: 16px;
 	padding-right: 24px;
@@ -356,4 +472,156 @@ body::after {
 		font-size: 40px;
 		text-align: center;
 	}
+}
+
+.content {
+	width: 100%;
+	padding-left: 6.09vw;
+	padding-right: 6.09vw;
+	padding-bottom: 6.09vw;
+}
+
+.bubble-text2 {
+	width: 129px;
+	height: 54px;
+	max-width: 320px;
+	padding: 14px;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 100%;
+	text-align: center;
+	margin-left: auto;
+	margin-top: 9px;
+}
+
+.bubble-text3 {
+	width: 168px;
+	height: 41px;
+	max-width: 320px;
+	padding: 10px;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 100%;
+	text-align: center;
+	margin-right: auto;
+	margin-top: 18px;
+}
+
+.bubble-text4 {
+	width: 103px;
+	height: 41px;
+	max-width: 320px;
+	padding: 10px;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 100%;
+	text-align: center;
+	margin-left: auto;
+	margin-top: 12px;
+}
+
+.bubble-text5 {
+	width: 216px;
+	height: 76px;
+	max-width: 320px;
+	padding: 16px;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 100%;
+	text-align: center;
+	margin-right: auto;
+	margin-top: 19px;
+}
+
+.bubble-text6 {
+	width: 173px;
+	height: 54px;
+	max-width: 320px;
+	padding: 14px;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 100%;
+	text-align: center;
+	margin-top: 33px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.bubble-text7 {
+	width: 216px;
+	height: 76px;
+	max-width: 320px;
+	padding: 16px;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 100%;
+	text-align: center;
+	margin-top: 31px;
+	margin-left: auto;
+}
+
+.bubble-text8 {
+	width: 170px;
+	height: 54px;
+	max-width: 320px;
+	padding: 16px;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 100%;
+	text-align: center;
+	margin-top: 32px;
+	margin-right: auto;
+}
+
+.bubble-text9 {
+	width: 252px;
+	height: 41px;
+	max-width: 320px;
+	padding: 10px;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 100%;
+	text-align: center;
+	margin-top: 40px;
+	margin-left: auto;
+}
+
+.bubble-text10 {
+	width: 226px;
+	height: 58px;
+	padding: 12px;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 100%;
+	text-align: center;
+	margin-top: 34px;
+	margin-right: auto;
+}
+
+.bubble-text11 {
+	width: 98px;
+	height: 54px;
+	max-width: 320px;
+	padding: 16px;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 100%;
+	text-align: center;
+	margin-top: 22px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.bubble-text12 {
+	width: 230px;
+height: 41px;
+max-width: 320px;
+padding: 10px;
+font-weight: 400;
+font-size: 14px;
+line-height: 100%;
+text-align: center;
+margin-top: 22px;
+margin-left: auto;
+margin-right: auto;
 }
