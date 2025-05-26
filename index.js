@@ -7,6 +7,7 @@ function addZero(num) {
 const daysEl = document.getElementById("days");
 const hoursEl = document.getElementById("hours");
 const minutesEl = document.getElementById("minutes");
+const secondsEl = document.getElementById("seconds");
 const countdownEl = document.getElementById("countdown");
 
 const interval = setInterval(() => {
@@ -15,7 +16,7 @@ const interval = setInterval(() => {
 
 	if (timeLeft <= 0) {
 		clearInterval(interval);
-		countdownEl.innerHTML = "<h2>Час вийшов!</h2>";
+		countdownEl.innerHTML = "<h2>Время истекло!</h2>";
 		return;
 	}
 
@@ -24,10 +25,12 @@ const interval = setInterval(() => {
 		(timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
 	);
 	const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+	const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 	
 
 	daysEl.textContent = addZero(days);
 	hoursEl.textContent = addZero(hours);
 	minutesEl.textContent = addZero(minutes);
+	secondsEl.textContent = addZero(seconds);
 	
 }, 1000);

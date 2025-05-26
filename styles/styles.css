@@ -7,6 +7,13 @@
 }
 
 @font-face {
+	font-family: "KodeMono";
+	src: url("../fonts/KodeMono-VariableFont_wght.ttf") format("opentype");
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
 	font-family: "Stolzl";
 	src: url("../fonts/stolzl_regular.otf") format("opentype");
 	font-weight: 400;
@@ -89,7 +96,7 @@ a {
 	left: 0;
 	top: 68px;
 	width: 76.21vw;
-	max-width: 400px;
+	max-width: 300px;
 	z-index: 4;
 }
 
@@ -194,7 +201,7 @@ a {
 }
 @media screen and (min-width: 1440px) {
 	.accent6 {
-	display: none;
+		display: none;
 	}
 
 	.accent5 {
@@ -213,7 +220,7 @@ a {
 	.accent8 {
 		position: absolute;
 		left: -250px;
-		bottom:-300px;
+		bottom: -300px;
 		display: block;
 		width: 1300px;
 		z-index: 4;
@@ -251,7 +258,6 @@ body {
 	background: linear-gradient(0deg, #1a1a1e, #1a1a1e),
 		linear-gradient(90.6deg, #1a1a1e 0.42%, #292a2e 49.61%, #1a1a1e 99.38%);
 	margin: 0;
-
 }
 
 body::after {
@@ -451,8 +457,8 @@ body::after {
 
 @media screen and (min-width: 992px) {
 	.timer-wrap {
-		width: 656px;
-		height: 176px;
+		width: 774px;
+		height: 173px;
 		padding-top: 32px;
 		padding-right: 64px;
 		padding-bottom: 32px;
@@ -465,8 +471,8 @@ body::after {
 .timer {
 	display: flex;
 	justify-content: center;
-	align-items: center;
-	gap: 12px;
+	align-items: flex-start;
+	gap: 8px;
 }
 @media screen and (min-width: 992px) {
 	.timer {
@@ -477,14 +483,22 @@ body::after {
 .time {
 	display: flex;
 	flex-direction: column;
+	width: 32px;
+}
+
+@media screen and (min-width: 992px) {
+	.time {
+		width: 104px;
+	}
 }
 
 .time-part {
-	font-family: "DelaGothicOne";
-	font-weight: 400;
-	font-size: 32px;
-	line-height: 32px;
+	font-family: "KodeMono";
+	font-weight: 700;
+	font-size: 26px;
+	line-height: 26px;
 	color: #292a2e;
+	font-variant-numeric: tabular-nums;
 }
 
 @media screen and (min-width: 992px) {
@@ -497,8 +511,8 @@ body::after {
 .label {
 	font-family: "DelaGothicOne";
 	font-weight: 400;
-	font-size: 8px;
-	line-height: 100%;
+	font-size: 6px;
+	line-height: 1.1;
 	text-align: center;
 	text-transform: uppercase;
 	color: #292a2e52;
@@ -506,16 +520,21 @@ body::after {
 
 @media screen and (min-width: 992px) {
 	.label {
-		font-size: 18px;
+		font-size: 16px;
+	}
+}
+@media screen and (min-width: 992px) {
+	.mobile-break {
+		display: none;
 	}
 }
 
 .colon {
 	user-select: none;
-	font-family: "DelaGothicOne";
+	font-family: "KodeMono";
 	font-weight: 400;
-	font-size: 32px;
-	line-height: 32px;
+	font-size: 26px;
+	line-height: 26px;
 	color: #292a2e52;
 }
 
