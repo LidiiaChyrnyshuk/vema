@@ -90,6 +90,7 @@ a {
 	top: 68px;
 	width: 76.21vw;
 	max-width: 400px;
+	z-index: 4;
 }
 
 @media screen and (min-width: 992px) {
@@ -167,6 +168,14 @@ a {
 	display: none;
 }
 
+.accent8 {
+	display: none;
+}
+
+.accent9 {
+	display: none;
+}
+
 @media screen and (min-width: 992px) {
 	.accent6 {
 		display: block;
@@ -185,7 +194,7 @@ a {
 }
 @media screen and (min-width: 1440px) {
 	.accent6 {
-		width: 1300px;
+	display: none;
 	}
 
 	.accent5 {
@@ -199,6 +208,28 @@ a {
 		right: -250px;
 		width: 1080px;
 		z-index: 5;
+	}
+
+	.accent8 {
+		position: absolute;
+		left: -250px;
+		bottom:-300px;
+		display: block;
+		width: 1300px;
+		z-index: 4;
+	}
+
+	.accent3 {
+		display: none;
+	}
+
+	.accent9 {
+		position: absolute;
+		top: -220px;
+		right: -650px;
+		display: block;
+		width: 1230px;
+		z-index: 4;
 	}
 }
 
@@ -255,6 +286,11 @@ body::after {
 @media screen and (min-width: 992px) {
 	.container {
 		padding-top: 80px;
+	}
+}
+@media screen and (min-width: 2400px) {
+	.container {
+		overflow: visible;
 	}
 }
 
