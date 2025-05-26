@@ -542,6 +542,9 @@ body::after {
 	line-height: 100%;
 	color: #292a2e;
 	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 @media screen and (min-width: 992px) {
