@@ -472,11 +472,11 @@ body::after {
 	display: flex;
 	justify-content: center;
 	align-items: flex-start;
-	gap: 8px;
+	gap: 4px;
 }
 @media screen and (min-width: 992px) {
 	.timer {
-		gap: 16px;
+		gap: 8px;
 	}
 }
 
