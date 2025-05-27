@@ -88,6 +88,47 @@ input {
 
 a {
 	color: inherit;
+	text-decoration: none;
+}
+
+/* ----------------------------------------- */
+
+html {
+	scroll-behavior: smooth;
+	height: auto;
+	min-height: 100%;
+}
+body {
+	font-family: "Stolzl", sans-serif;
+	color: #ffffff;
+	position: relative;
+	width: 100vw;
+	height: auto;
+	min-height: 100dvh;
+	max-height: 1226px;
+	overflow-x: hidden;
+	background: linear-gradient(0deg, #1a1a1e, #1a1a1e),
+		linear-gradient(90.6deg, #1a1a1e 0.42%, #292a2e 49.61%, #1a1a1e 99.38%);
+	margin: 0;
+}
+
+body::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	pointer-events: none;
+	z-index: 2;
+	background-image: linear-gradient(
+			180deg,
+			rgba(26, 26, 30, 0) 0%,
+			rgba(26, 26, 30, 0.84) 59.2%,
+			#1a1a1e 100%
+		),
+		url(../images/bg-img.webp);
+	opacity: 1;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
 }
 
 /* ----------accent---------- */
@@ -196,7 +237,7 @@ a {
 
 @media screen and (min-width: 1200px) {
 	.accent6 {
-		width: 85.97vw;
+		max-width: 900px;
 	}
 }
 @media screen and (min-width: 1440px) {
@@ -241,44 +282,6 @@ a {
 }
 
 /* -----------main------------- */
-
-html {
-	scroll-behavior: smooth;
-	height: auto;
-	min-height: 100%;
-}
-body {
-	font-family: "Stolzl", sans-serif;
-	color: #ffffff;
-	position: relative;
-	width: 100vw;
-	height: auto;
-	min-height: 100dvh;
-	overflow-x: hidden;
-	background: linear-gradient(0deg, #1a1a1e, #1a1a1e),
-		linear-gradient(90.6deg, #1a1a1e 0.42%, #292a2e 49.61%, #1a1a1e 99.38%);
-	margin: 0;
-}
-
-body::after {
-	content: "";
-	position: absolute;
-	inset: 0;
-	pointer-events: none;
-	z-index: 2;
-	background-image: linear-gradient(
-			180deg,
-			rgba(26, 26, 30, 0) 0%,
-			rgba(26, 26, 30, 0.84) 59.2%,
-			#1a1a1e 100%
-		),
-		url(../images/bg-img.webp);
-	opacity: 1;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-}
-
 .container {
 	position: relative;
 	width: 100%;
@@ -292,6 +295,7 @@ body::after {
 @media screen and (min-width: 992px) {
 	.container {
 		padding-top: 80px;
+		height: 1226px;
 	}
 }
 @media screen and (min-width: 2400px) {
@@ -414,14 +418,29 @@ body::after {
 	}
 }
 
+@media screen and (min-width: 1440px) {
+	.bubble-text1 {
+		width: 19.70vw;
+		height: 2.75vw;
+		max-width: 560px;
+/* 		padding-top: 16px;
+		padding-right: 22px;
+		padding-bottom: 16px;
+		padding-left: 22px; */
+		font-size: 1.16vw;
+		text-align: center;
+		margin-left: 10%;
+	}
+}
+
 .hero {
 	position: relative;
 	width: 300px;
-	height: 240px;
+	height: 290px;
 	background-image: url(../images/Maskot.webp);
 	background-repeat: no-repeat;
 	background-size: contain;
-	background-position: center 0;
+	background-position: center -30px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -432,9 +451,9 @@ body::after {
 }
 @media screen and (min-width: 992px) {
 	.hero {
-		width: 656px;
-		height: 480px;
-		background-position: center -60px;
+		width: 992px;
+		height: 700px;
+		background-position: center -100px;
 	}
 }
 
@@ -581,6 +600,45 @@ body::after {
 	}
 }
 
+.hero-cta {
+	width: 240px;
+	height: 54px;
+	padding-top: 16px;
+	padding-right: 32px;
+	padding-bottom: 16px;
+	padding-left: 32px;
+	border-radius: 16px;
+	border: 4px solid rgba(255, 255, 255, 0.32);
+	overflow: hidden;
+	background: linear-gradient(180deg, #44ffa6 0%, #00dc74 100%);
+	/* background: radial-gradient(at center, #44FFA6 0%,#44FFA6 100%); */
+	font-family: "Stolzl";
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 1.1;
+	cursor: pointer;
+	text-transform: uppercase;
+	text-align: center;
+	color: #292a2e;
+	margin-top: 32px;
+	box-shadow: 0px 4px 24px 0px #000000a3, 0px 0px 48px 0px #36ffa080,
+		0px 0px 12px 0px #36ffa0cc;
+}
+
+@media screen and (min-width: 992px) {
+	.hero-cta {
+		width: 320px;
+		height: 96px;
+		padding-top: 24px;
+		padding-right: 32px;
+		padding-bottom: 24px;
+		padding-left: 32px;
+		border-radius: 24px;
+		font-size: 40px;
+		margin-top: 56px;
+	}
+}
+
 .content {
 	width: 100%;
 	padding-left: 6.09vw;
@@ -598,7 +656,6 @@ body::after {
 	line-height: 100%;
 	text-align: center;
 	margin-left: auto;
-	margin-top: 9px;
 }
 
 .bubble-text3 {
@@ -611,7 +668,7 @@ body::after {
 	line-height: 100%;
 	text-align: center;
 	margin-right: auto;
-	margin-top: 18px;
+	margin-top: 15px;
 }
 
 .bubble-text4 {
@@ -624,7 +681,6 @@ body::after {
 	line-height: 100%;
 	text-align: center;
 	margin-left: auto;
-	margin-top: 12px;
 }
 
 .bubble-text5 {
@@ -637,7 +693,7 @@ body::after {
 	line-height: 100%;
 	text-align: center;
 	margin-right: auto;
-	margin-top: 19px;
+	margin-top: 12px;
 }
 
 .bubble-text6 {
@@ -649,22 +705,21 @@ body::after {
 	font-size: 18px;
 	line-height: 100%;
 	text-align: center;
-	margin-top: 33px;
 	margin-left: auto;
 	margin-right: auto;
 }
 
 .bubble-text7 {
-	width: 216px;
-	height: 76px;
+	width: 250px;
+	height: 41px;
 	max-width: 320px;
-	padding: 16px;
-	font-weight: 500;
-	font-size: 18px;
-	line-height: 100%;
+	padding: 12px;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 1.1;
 	text-align: center;
-	margin-top: 31px;
 	margin-left: auto;
+	margin-top: 48px;
 }
 
 .bubble-text8 {
@@ -676,7 +731,7 @@ body::after {
 	font-size: 18px;
 	line-height: 100%;
 	text-align: center;
-	margin-top: 32px;
+	margin-top: 50px;
 	margin-right: auto;
 }
 
@@ -750,58 +805,70 @@ body::after {
 		position: absolute;
 		top: 27.8px;
 		right: 113px;
-		width: 268px;
-		height: 94px;
+		/* 		width: 268px;
+		height: 94px; */
+		width: 21.87vw;
+		height: 7.67vw;
 		max-width: 580px;
-		padding-top: 24px;
+		/* 		padding-top: 24px;
 		padding-right: 30px;
 		padding-bottom: 24px;
-		padding-left: 30px;
-		font-size: 38px;
+		padding-left: 30px; */
+		/* font-size: 38px; */
+		font-size: 3.1vw;
 	}
 
 	.bubble-text3 {
 		position: absolute;
 		top: 200px;
 		left: 30px;
-		width: 335px;
-		height: 66px;
+		/* 		width: 335px;
+		height: 66px; */
+		width: 27.34vw;
+		height: 5.38vw;
 		max-width: 560px;
-		padding-top: 16px;
+		/* 		padding-top: 16px;
 		padding-right: 22px;
 		padding-bottom: 16px;
 		padding-left: 22px;
-		font-size: 28px;
+		font-size: 28px; */
+		font-size: 2.28vw;
 	}
 
 	.bubble-text4 {
 		position: absolute;
 		top: 400px;
 		right: 2%;
-		width: 280px;
-		height: 94px;
+		/* 		width: 280px;
+		height: 94px; */
+		width: 22.85vw;
+		height: 7.67vw;
 		max-width: 580px;
-		padding-top: 24px;
+		/* 		padding-top: 24px;
 		padding-right: 30px;
 		padding-bottom: 24px;
-		padding-left: 30px;
+		padding-left: 30px; */
 		font-weight: 500;
-		font-size: 38px;
+		/* font-size: 38px; */
+		font-size: 3.1vw;
 	}
 
 	.bubble-text5 {
 		position: absolute;
 		left: 3%;
-		bottom: 45%;
-		width: 460px;
-		height: 66px;
+		bottom: 42%;
+		/* 		width: 460px;
+		height: 66px; */
+		width: 37.55vw;
+		height: 5.38vw;
 		max-width: 560px;
-		padding-top: 16px;
+		/* 		padding-top: 16px;
 		padding-right: 22px;
 		padding-bottom: 16px;
-		padding-left: 22px;
+		padding-left: 22px; */
 		font-weight: 400;
-		font-size: 28px;
+		/* font-size: 28px; */
+		font-size: 2.28vw;
 	}
 
 	.bubble-text6 {
@@ -811,86 +878,103 @@ body::after {
 	.bubble-text7 {
 		position: absolute;
 		right: 4%;
-		bottom: 50px;
-		width: 489px;
-		height: 66px;
+		bottom: 20%;
+		/* 		width: 489px;
+		height: 66px; */
+		width: 39.91vw;
+		height: 5.38vw;
 		max-width: 560px;
-		padding-top: 16px;
+		/* 		padding-top: 16px;
 		padding-right: 22px;
 		padding-bottom: 16px;
-		padding-left: 22px;
+		padding-left: 22px; */
 		font-weight: 400;
-		font-size: 28px;
+		/* font-size: 28px; */
+		font-size: 2.28vw;
 	}
 
 	.bubble-text8 {
 		position: absolute;
-		left: 0;
+		left: 2%;
 		top: 30%;
 		width: 326px;
 		height: 94px;
+		/* 		width: 26,61vw;
+		height: 7.67vw; */
 		max-width: 580px;
-		padding-top: 24px;
+		/* 		padding-top: 24px;
 		padding-right: 30px;
 		padding-bottom: 24px;
-		padding-left: 30px;
+		padding-left: 30px; */
 		font-size: 38px;
 	}
 
 	.bubble-text9 {
 		position: absolute;
-		right: 10%;
+		right: 5%;
 		bottom: 40%;
-		width: 503px;
-		height: 66px;
+		/* 		width: 503px;
+		height: 66px; */
+		width: 41.06vw;
+		height: 5.38vw;
 		max-width: 560px;
-		padding-top: 16px;
+		/* 		padding-top: 16px;
 		padding-right: 20px;
 		padding-bottom: 16px;
-		padding-left: 20px;
-		font-size: 28px;
+		padding-left: 20px; */
+		/* 	font-size: 28px; */
+		font-size: 2.28vw;
 	}
 
 	.bubble-text10 {
 		position: absolute;
 		left: 5%;
-		bottom: 250px;
-		width: 512px;
-		height: 100px;
+		bottom: 28%;
+		/* 		width: 512px;
+		height: 100px; */
+		width: 41.79vw;
+		height: 8.16vw;
 		max-width: 512px;
-		padding-top: 16px;
+		/* 		padding-top: 16px;
 		padding-right: 24px;
 		padding-bottom: 16px;
-		padding-left: 24px;
-		font-size: 28px;
+		padding-left: 24px; */
+		/* 	font-size: 28px; */
+		font-size: 2.28vw;
 	}
 
 	.bubble-text11 {
 		position: absolute;
 		right: 10%;
-		bottom: 200px;
-		width: 190px;
-		height: 94px;
+		bottom: 30%;
+		/* 		width: 190px;
+		height: 94px; */
+		width: 15.51vw;
+		height: 7.67vw;
 		max-width: 580px;
-		padding-top: 24px;
+		/* 		padding-top: 24px;
 		padding-right: 32px;
 		padding-bottom: 24px;
-		padding-left: 32px;
-		font-size: 38px;
+		padding-left: 32px; */
+		/* 	font-size: 38px; */
+		font-size: 3.1vw;
 	}
 
 	.bubble-text12 {
 		position: absolute;
 		left: 10%;
-		bottom: 40px;
-		width: 459px;
-		height: 66px;
+		bottom: 20%;
+		/* 		width: 459px;
+		height: 66px; */
+		width: 37.46vw;
+		height: 5.38vw;
 		max-width: 512px;
-		padding-top: 16px;
+		/* 		padding-top: 16px;
 		padding-right: 20px;
 		padding-bottom: 16px;
-		padding-left: 20px;
-		font-size: 28px;
+		padding-left: 20px; */
+		/* 	font-size: 28px; */
+		font-size: 2.28vw;
 	}
 
 	.bubble-text13 {
@@ -898,16 +982,19 @@ body::after {
 		position: absolute;
 		top: 200px;
 		right: 5%;
-		width: 290px;
-		height: 66px;
+		/* 		width: 290px;
+		height: 66px; */
+		width: 23.67vw;
+		height: 5.38vw;
 		max-width: 512px;
-		padding-top: 16px;
-		padding-right: 22px;
-		padding-bottom: 16px;
-		padding-left: 22px;
+		padding-top: 10px;
+		padding-right: 16px;
+		padding-bottom: 10px;
+		padding-left: 16px;
 		font-weight: 400;
-		font-size: 28px;
-		line-height: 100%;
+		/* 	font-size: 28px; */
+		font-size: 2.28vw;
+		line-height: 1.1;
 		text-align: center;
 	}
 }
@@ -917,58 +1004,70 @@ body::after {
 		position: absolute;
 		top: -10%;
 		right: 100px;
-		width: 268px;
-		height: 94px;
+		/* 		width: 268px;
+		height: 94px; */
+		width: 17.72vw;
+		height: 6.21vw;
 		max-width: 580px;
-		padding-top: 24px;
+		/* 		padding-top: 24px;
 		padding-right: 30px;
 		padding-bottom: 24px;
-		padding-left: 30px;
-		font-size: 38px;
+		padding-left: 30px; */
+		/* font-size: 38px; */
+		font-size: 2.51vw;
 	}
 
 	.bubble-text3 {
 		position: absolute;
 		top: 200px;
 		left: 30px;
-		width: 335px;
-		height: 66px;
+		/* 		width: 335px;
+		height: 66px; */
+		width: 22.15vw;
+		height: 4.36vw;
 		max-width: 560px;
-		padding-top: 16px;
+		/* 		padding-top: 16px;
 		padding-right: 22px;
 		padding-bottom: 16px;
-		padding-left: 22px;
-		font-size: 28px;
+		padding-left: 22px; */
+		/* font-size: 28px; */
+		font-size: 1.85vw;
 	}
 
 	.bubble-text4 {
 		position: absolute;
 		top: 400px;
 		right: 2%;
-		width: 280px;
-		height: 94px;
+		/* 		width: 280px;
+		height: 94px; */
+		width: 18.51vw;
+		height: 6.21vw;
 		max-width: 580px;
-		padding-top: 24px;
+		/* 		padding-top: 24px;
 		padding-right: 30px;
 		padding-bottom: 24px;
-		padding-left: 30px;
+		padding-left: 30px; */
 		font-weight: 500;
-		font-size: 38px;
+		/* font-size: 38px; */
+		font-size: 2.51vw;
 	}
 
 	.bubble-text5 {
 		position: absolute;
 		left: 3%;
-		bottom: 45%;
-		width: 460px;
-		height: 66px;
+		bottom: 41%;
+		/* 		width: 460px;
+		height: 66px; */
+		width: 30.42vw;
+		height: 4.36vw;
 		max-width: 560px;
-		padding-top: 16px;
+		/* 		padding-top: 16px;
 		padding-right: 22px;
 		padding-bottom: 16px;
-		padding-left: 22px;
+		padding-left: 22px; */
 		font-weight: 400;
-		font-size: 28px;
+		/* font-size: 28px; */
+		font-size: 1.85vw;
 	}
 
 	.bubble-text6 {
@@ -976,102 +1075,123 @@ body::after {
 		position: absolute;
 		top: 5%;
 		right: 5%;
-		width: 360px;
-		height: 94px;
+		/* 		width: 360px;
+		height: 94px; */
+		width: 23.8vw;
+		height: 6.21vw;
 		max-width: 580px;
-		padding-top: 24px;
+		/* 		padding-top: 24px;
 		padding-right: 30px;
 		padding-bottom: 24px;
-		padding-left: 30px;
+		padding-left: 30px; */
 		font-weight: 500;
-		font-size: 38px;
+		/* font-size: 38px; */
+		font-size: 2.51vw;
 		line-height: 100%;
 		text-align: center;
 	}
 
 	.bubble-text7 {
 		position: absolute;
-		right: 4%;
-		bottom: 50px;
-		width: 489px;
-		height: 66px;
+		right: 10%;
+		bottom: 22%;
+		/* 		width: 489px;
+		height: 66px; */
+		width: 32.34vw;
+		height: 4.36vw;
 		max-width: 560px;
-		padding-top: 16px;
+		/* 		padding-top: 16px;
 		padding-right: 22px;
 		padding-bottom: 16px;
-		padding-left: 22px;
+		padding-left: 22px; */
 		font-weight: 400;
-		font-size: 28px;
+		/* font-size: 28px; */
+		font-size: 1.85vw;
 	}
 
 	.bubble-text8 {
 		position: absolute;
 		left: 0;
 		top: 30%;
-		width: 326px;
-		height: 94px;
+		/* 		width: 326px;
+		height: 94px; */
+		width: 21.56vw;
+		height: 6.21vw;
 		max-width: 580px;
-		padding-top: 24px;
+		/* 		padding-top: 24px;
 		padding-right: 30px;
 		padding-bottom: 24px;
-		padding-left: 30px;
-		font-size: 38px;
+		padding-left: 30px; */
+		/* font-size: 38px; */
+		font-size: 2.51vw;
 	}
 
 	.bubble-text9 {
 		position: absolute;
-		right: 10%;
-		bottom: 40%;
-		width: 503px;
-		height: 66px;
+		right: 2%;
+		bottom: 38%;
+		/* 		width: 503px;
+		height: 66px; */
+		width: 33.26vw;
+		height: 4.36vw;
 		max-width: 560px;
-		padding-top: 16px;
+		/* 	padding-top: 16px;
 		padding-right: 20px;
 		padding-bottom: 16px;
-		padding-left: 20px;
-		font-size: 28px;
+		padding-left: 20px; */
+		/* font-size: 28px; */
+		font-size: 1.85vw;
 	}
 
 	.bubble-text10 {
 		position: absolute;
 		left: 5%;
-		bottom: 250px;
-		width: 512px;
-		height: 100px;
+		bottom: 27%;
+		/* 		width: 512px;
+		height: 100px; */
+		width: 33.86vw;
+		height: 6.61vw;
 		max-width: 512px;
-		padding-top: 16px;
+		/* 		padding-top: 16px;
 		padding-right: 24px;
 		padding-bottom: 16px;
-		padding-left: 24px;
-		font-size: 28px;
+		padding-left: 24px; */
+		/* font-size: 28px; */
+		font-size: 1.85vw;
 	}
 
 	.bubble-text11 {
 		position: absolute;
 		right: 20%;
-		bottom: 200px;
-		width: 190px;
-		height: 94px;
+		bottom: 30%;
+		/* 		width: 190px;
+		height: 94px; */
+		width: 12.56vw;
+		height: 6.21vw;
 		max-width: 580px;
-		padding-top: 24px;
+		/* 		padding-top: 24px;
 		padding-right: 32px;
 		padding-bottom: 24px;
-		padding-left: 32px;
-		font-size: 38px;
+		padding-left: 32px; */
+		/* font-size: 38px; */
+		font-size: 2.51vw;
 	}
 
 	.bubble-text12 {
 		position: absolute;
 		left: 10%;
-		bottom: 40px;
+		bottom: 20%;
+		/* 		width: 459px;
+		height: 66px; */
 		width: 459px;
-		height: 66px;
+		height: 4.38vw;
 		max-width: 512px;
-		padding-top: 16px;
+		/* 		padding-top: 16px;
 		padding-right: 20px;
 		padding-bottom: 16px;
-		padding-left: 20px;
-		font-size: 28px;
+		padding-left: 20px; */
+		/* font-size: 28px; */
+		font-size: 1.85vw;
 	}
 
 	.bubble-text13 {
@@ -1079,15 +1199,18 @@ body::after {
 		position: absolute;
 		top: 200px;
 		right: 5%;
-		width: 290px;
-		height: 66px;
+		/* 		width: 290px;
+		height: 66px; */
+		width: 19.17vw;
+		height: 4.36vw;
 		max-width: 512px;
-		padding-top: 16px;
-		padding-right: 22px;
-		padding-bottom: 16px;
-		padding-left: 22px;
+		padding-top: 12px;
+		padding-right: 18px;
+		padding-bottom: 12px;
+		padding-left: 18px;
 		font-weight: 400;
-		font-size: 28px;
+		/* font-size: 28px; */
+		font-size: 1.85vw;
 		line-height: 100%;
 		text-align: center;
 	}
@@ -1098,58 +1221,70 @@ body::after {
 		position: absolute;
 		top: -5%;
 		right: 15%;
-		width: 268px;
-		height: 94px;
+		/* 		width: 268px;
+		height: 94px; */
+		width: 11.16vw;
+		height: 3.91vw;
 		max-width: 580px;
-		padding-top: 24px;
+		/* 		padding-top: 24px;
 		padding-right: 30px;
 		padding-bottom: 24px;
-		padding-left: 30px;
-		font-size: 38px;
+		padding-left: 30px; */
+		/* 		font-size: 38px; */
+		font-size: 1.58vw;
 	}
 
 	.bubble-text3 {
 		position: absolute;
 		top: 200px;
 		left: 15%;
-		width: 335px;
-		height: 66px;
+		/* 		width: 335px;
+		height: 66px; */
+		width: 13.95vw;
+		height: 2.75vw;
 		max-width: 560px;
-		padding-top: 16px;
+		/* 		padding-top: 16px;
 		padding-right: 22px;
 		padding-bottom: 16px;
-		padding-left: 22px;
-		font-size: 28px;
+		padding-left: 22px; */
+		/* 		font-size: 28px; */
+		font-size: 1.16vw;
 	}
 
 	.bubble-text4 {
 		position: absolute;
 		bottom: 40%;
 		left: 10%;
-		width: 280px;
-		height: 94px;
+		/* 		width: 280px;
+		height: 94px; */
+		width: 11.66vw;
+		height: 3.91vw;
 		max-width: 580px;
-		padding-top: 24px;
+		/* 		padding-top: 24px;
 		padding-right: 30px;
 		padding-bottom: 24px;
-		padding-left: 30px;
+		padding-left: 30px; */
 		font-weight: 500;
-		font-size: 38px;
+		/* 		font-size: 38px; */
+		font-size: 1.58vw;
 	}
 
 	.bubble-text5 {
 		position: absolute;
 		left: 40%;
-		bottom: 10%;
-		width: 460px;
-		height: 66px;
+		bottom: 20%;
+		/* 		width: 460px;
+		height: 66px; */
+		width: 19.16vw;
+		height: 2.75vw;
 		max-width: 560px;
-		padding-top: 16px;
+		/* 		padding-top: 16px;
 		padding-right: 22px;
 		padding-bottom: 16px;
-		padding-left: 22px;
+		padding-left: 22px; */
 		font-weight: 400;
-		font-size: 28px;
+		/* 		font-size: 28px; */
+		font-size: 1.16vw;
 	}
 
 	.bubble-text6 {
@@ -1157,15 +1292,18 @@ body::after {
 		position: absolute;
 		top: 15%;
 		right: 10%;
-		width: 360px;
-		height: 94px;
+		/* 		width: 360px;
+		height: 94px; */
+		width: 15vw;
+		height: 3.91vw;
 		max-width: 580px;
-		padding-top: 24px;
-		padding-right: 30px;
-		padding-bottom: 24px;
-		padding-left: 30px;
+				padding-top: 10px;
+		padding-right: 16px;
+		padding-bottom: 10px;
+		padding-left: 16px;
 		font-weight: 500;
-		font-size: 38px;
+		/* 		font-size: 38px; */
+		font-size: 1.58vw;
 		line-height: 100%;
 		text-align: center;
 	}
@@ -1174,57 +1312,69 @@ body::after {
 		position: absolute;
 		left: 4%;
 		bottom: 60%;
-		width: 489px;
-		height: 66px;
+		/* 		width: 489px;
+		height: 66px; */
+		width: 20.37vw;
+		height: 2.75vw;
 		max-width: 560px;
-		padding-top: 16px;
+		/* 		padding-top: 16px;
 		padding-right: 22px;
 		padding-bottom: 16px;
-		padding-left: 22px;
+		padding-left: 22px; */
 		font-weight: 400;
-		font-size: 28px;
+		/* 		font-size: 28px; */
+		font-size: 1.16vw;
 	}
 
 	.bubble-text8 {
 		position: absolute;
 		right: 5%;
-		top: 60%;
-		width: 326px;
-		height: 94px;
+		top: 45%;
+		/* 		width: 326px;
+		height: 94px; */
+		width: 13.58vw;
+		height: 3.91vw;
 		max-width: 580px;
-		padding-top: 24px;
+		/* 		padding-top: 24px;
 		padding-right: 30px;
 		padding-bottom: 24px;
-		padding-left: 30px;
-		font-size: 38px;
+		padding-left: 30px; */
+		/* 		font-size: 38px; */
+		font-size: 1.58vw;
 	}
 
 	.bubble-text9 {
 		position: absolute;
-		left: 10%;
-		bottom: 5%;
-		width: 503px;
-		height: 66px;
+		left: 15%;
+		bottom: 22%;
+		/* 		width: 503px;
+		height: 66px; */
+		width: 20.95vw;
+		height: 2.75vw;
 		max-width: 560px;
-		padding-top: 16px;
+		/* 		padding-top: 16px;
 		padding-right: 20px;
 		padding-bottom: 16px;
-		padding-left: 20px;
-		font-size: 28px;
+		padding-left: 20px; */
+		/* 		font-size: 28px; */
+		font-size: 1.16vw;
 	}
 
 	.bubble-text10 {
 		position: absolute;
-		right: 10%;
-		bottom: 8%;
-		width: 512px;
-		height: 100px;
+		right: 15%;
+		bottom: 25%;
+		/* 		width: 512px;
+		height: 100px; */
+		width: 21.33vw;
+		height: 4.16vw;
 		max-width: 512px;
-		padding-top: 16px;
+		/* 		padding-top: 16px;
 		padding-right: 24px;
 		padding-bottom: 16px;
-		padding-left: 24px;
-		font-size: 28px;
+		padding-left: 24px; */
+		/* 		font-size: 28px; */
+		font-size: 1.16vw;
 	}
 
 	.bubble-text11 {
@@ -1235,30 +1385,36 @@ body::after {
 		position: absolute;
 		right: 20%;
 		bottom: 40%;
-		width: 459px;
-		height: 66px;
+		/* 		width: 459px;
+		height: 66px; */
+		width: 19.12vw;
+		height: 2.75vw;
 		max-width: 512px;
-		padding-top: 16px;
+		/* 		padding-top: 16px;
 		padding-right: 20px;
 		padding-bottom: 16px;
-		padding-left: 20px;
-		font-size: 28px;
+		padding-left: 20px; */
+		/* 		font-size: 28px; */
+		font-size: 1.16vw;
 	}
 
 	.bubble-text13 {
 		display: block;
 		position: absolute;
 		top: 30%;
-		right: 15%;
-		width: 290px;
-		height: 66px;
+		right: 10%;
+		/* 		width: 290px;
+		height: 66px; */
+		width: 12.08vw;
+		height: 2.75vw;
 		max-width: 512px;
-		padding-top: 16px;
-		padding-right: 22px;
-		padding-bottom: 16px;
-		padding-left: 22px;
+				padding-top: 12px;
+		padding-right: 10px;
+		padding-bottom: 10px;
+		padding-left: 10px;
 		font-weight: 400;
-		font-size: 28px;
+		/* 		font-size: 28px; */
+		font-size: 1.16vw;
 		line-height: 100%;
 		text-align: center;
 	}
@@ -1266,17 +1422,20 @@ body::after {
 	.bubble-text14 {
 		display: block;
 		position: absolute;
-		left: 20%;
+		left: 10%;
 		bottom: 30%;
-		width: 730px;
-		height: 94px;
+		/* 		width: 730px;
+		height: 94px; */
+		width: 30.41vw;
+		height: 3.91vw;
 		max-width: 774px;
-		padding-top: 24px;
-		padding-right: 30px;
-		padding-bottom: 24px;
-		padding-left: 30px;
+				padding-top: 16px;
+		padding-right: 16px;
+		padding-bottom: 10px;
+		padding-left: 16px;
 		font-weight: 500;
-		font-size: 38px;
+		/* 		font-size: 38px; */
+		font-size: 1.58vw;
 		line-height: 100%;
 		text-align: center;
 	}
