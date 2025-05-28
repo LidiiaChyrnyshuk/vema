@@ -1408,13 +1408,13 @@ body::after {
 		width: 12.08vw;
 		height: 2.75vw;
 		max-width: 512px;
-				padding-top: 12px;
+				padding-top: 10px;
 		padding-right: 10px;
 		padding-bottom: 10px;
 		padding-left: 10px;
 		font-weight: 400;
 		/* 		font-size: 28px; */
-		font-size: 1.16vw;
+		font-size: 1.06vw;
 		line-height: 100%;
 		text-align: center;
 	}
